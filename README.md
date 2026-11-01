@@ -1,6 +1,10 @@
 # ICTIO Prompt Skill
 
-用 ICTIO 组织提示词，按当前阶段完成初始化、定向优化和效果评测。
+**把需求写清楚，把提示词改明白。**
+
+用 ICTIO 理清判断逻辑、提炼准确指令，让人和 AI 都容易理解，也方便后续维护。
+
+Prompt engineering & optimization skill for coding agents, including Codex and Claude Code.
 
 [安装](#安装) · [使用](#使用) · [工作方式](#工作方式) · [Skill 正文](skills/prompt/SKILL.md)
 
@@ -22,7 +26,9 @@ npx skills add EchoUser005/ictio-prompt-skill --skill prompt -g -a codex
 
 ## 使用
 
-安装后，直接让助手使用 `prompt` skill，并提供任务需求或现有提示词。Codex 可通过 `$prompt` 显式调用；各工具的入口以其技能选择器为准。[Codex 使用说明](https://learn.chatgpt.com/docs/build-skills)
+提供任务需求或现有提示词，获得可审阅、复制使用的候选稿和关键改动说明。系统接入与发布由使用者按项目安排，效果评测按需开展。
+
+安装后，直接让助手使用 `prompt` skill。Codex 可通过 `$prompt` 显式调用；各工具的入口以其技能选择器为准。[Codex 使用说明](https://learn.chatgpt.com/docs/build-skills)
 
 **从零开始**
 
@@ -35,8 +41,8 @@ npx skills add EchoUser005/ictio-prompt-skill --skill prompt -g -a codex
 **优化表达**
 
 ```text
-使用 prompt skill，整理下面这段提示词。
-保留业务判断顺序和已认可的示例，把拖沓的要求提炼成明确指令。
+使用 prompt skill，优化下面这段提示词，让判断顺序和条件更清楚，表达简洁准确。
+保留业务含义和已认可的示例，先在对话里给我看候选全文。
 [附现有提示词]
 ```
 
@@ -54,7 +60,7 @@ npx skills add EchoUser005/ictio-prompt-skill --skill prompt -g -a codex
 | --- | --- |
 | 初始化 | 明确任务类型和核心规则，选择必要的 ICTIO 要素，写最小可用初稿。 |
 | 定向优化 | 定位表达、逻辑、上下文或模型表现的问题，修改相关部分。 |
-| 验证与沉淀 | 核对实际输入与评分口径，通过受控对照验证变化，保留下一轮基线。 |
+| 验证与沉淀 | 需要确认效果时，核对实际输入与评分口径，通过受控对照验证变化。 |
 
 ICTIO 对应 **Instruction、Context、Tools、Input、Output**。按任务需要组合；一句 goal 能说清，就保留一句，需要先后判断或条件分流时再展开 workflow。
 

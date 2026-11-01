@@ -1,6 +1,6 @@
 ---
 name: prompt
-description: 编写、修改、审查或评测提示词时，按当前阶段与任务类型选择 ICTIO 要素，理清核心逻辑、提炼可执行指令，并通过受控对照验证效果。
+description: 编写、优化或审查提示词（prompt engineering / optimization）。当用户需要从需求写出初稿，或现有提示词冗长、含混、逻辑难懂、难以维护时，使用 ICTIO 理清判断顺序与条件，将要求提炼为清晰、准确、可执行的指令；需要验证效果时使用评测方法。
 ---
 
 # Prompt
